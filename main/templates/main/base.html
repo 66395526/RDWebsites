@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="zh-hans">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+        <title>
+            {% block title %}页面标题{% endblock %}
+        </title>
+
+
+        {% load staticfiles %}
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}" />
+
+
+    </head>
+
+    <!-- 模板页面主体内容 -->
+    <body>
+        <!-- 页头 -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 导航栏 -->
+        <nav role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="navbar navbar-default">
+{#                            <div class="navbar-header">#}
+{#                                <div class="navbar-brand"><h3>锐达医药</h3></div>#}
+{#                            </div>#}
+                            <ul class="nav navbar-nav navbar-right" style="font-size: 150%">
+                                <li><a href={% url 'main:index' %}>主页</a></li>
+                                <li><a href={% url 'main:about' %}>关于锐达</a></li>
+                                <li><a href={% url 'main:news' %}>公司新闻</a></li>
+                                <li><a href={% url 'main:products' %}>产品服务</a></li>
+                                <li><a href={% url 'main:employment' %}>加入我们</a></li>
+{#                                <li><a href="/main/templates/main/cooperation.html">对外合作</a></li>#}
+                                <li><a href={% url 'main:contacts' %}>联系我们</a></li>
+                                <li>&nbsp&nbsp&nbsp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            {% load static %}
+            <div style="background: url({% static "main/image/backgroud_image.jpg" %})">
+                {% block main %}{% endblock main %}
+                <br>
+            </div>
+        </main>
+
+        <br>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body text-right">
+                                <strong>河南省锐达医药科技有限公司</strong><p>2017</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="{% static 'main/js/jquery-3.2.1.min.js' %}"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

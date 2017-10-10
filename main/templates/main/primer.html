@@ -1,0 +1,60 @@
+{% extends "main/base.html" %}
+
+
+{% block title %}
+    产品服务
+{% endblock title %}
+
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            {% load static %}
+            <h1 class="text-center" style="padding-top: 2%; padding-bottom: 2%">引物合成</h1>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1 class="text-center">引物种类</h1>
+                    <div class="col-md-6">
+                        {% load static %}
+                        <img src="{% static "main/image/oligo-common-primer_110x210.png" %}" class="img-responsive center-block">
+                        <h2 class="text-center">普通引物</h2>
+                        <h5 class="text-center">常规引物合成：6-60 base</h5>
+                        <h5 class="text-center">长链引物合成：61-150 base</h5>
+                        <h5 class="text-center">（提供DSL，hPAGE，HPLC纯化方式）</h5>
+                    </div>
+                    <div class="col-md-6">
+                        {% load static %}
+                        <img src="{% static "main/image/oligo - Custom.png" %}" class="img-responsive center-block">
+                        <h2 class="text-center">修饰引物</h2>
+                        <h5 class="text-center">提供多种修饰类型</h5>
+                        <h5 class="text-center">提供质谱报告</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1 class="text-center">订购流程指南</h1>
+                    <ol class="lead">
+                        {% load static %}
+                        <li>下载河南省锐达引物订单表<a href="{% static "main/download_file/order_list.xls" %}" download="order_list">点击下载</a>；</li>
+                        <li>客户在引物订单表内填写订购信息；</li>
+                        <li>发送引物订单表到电子邮箱：<a href="mailto:sales@rdmarvin.com">sales@rdmarvin.com</a>；</li>
+                        <li>客服人员联系客户确认订购信息；</li>
+                        <li>引物配送；</li>
+                        <li>客服人员联系客户确认收货情况。</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <p>
+                    销售热线：<a href="tel:17337867651">17337867651</a>
+                </p>
+                <p>
+                    电子邮箱：<a href="mailto:sales@rdmarvin.com">sales@rdmarvin.com</a>
+                </p>
+            </div>
+        </div>
+{% endblock main %}

@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+
+
+{% block title %}
+    {{ employment.title }}
+{% endblock title %}
+
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">{{ employment.title }}</h1>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>岗位职责：</h3>
+                        {{ employment.responsibility|safe }}
+                        <h3>任职要求：</h3>
+                        {{ employment.requirements|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
